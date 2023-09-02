@@ -4,7 +4,7 @@ export default createStore({
     state: {
         user: {
             data:{ name:'Zura'},
-            token: null
+            token: 123
         }
     },
     getters:{},
