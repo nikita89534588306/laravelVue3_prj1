@@ -10,5 +10,5 @@
 </template>
     
 <script setup>
-  import HeaderDashboard from '../components/HeaderDashboard.vue';
+  import HeaderDashboard from '@/views/dashboard/components/HeaderDashboard.vue';
 </script>

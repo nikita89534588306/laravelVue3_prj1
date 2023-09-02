@@ -1,42 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
 import store from '../store'
 
-const routes = [
-    {
-        path: '/',
-        redirect: '/dashboard',
-        name: 'Dashboard',
-        meta: {requireAuth: true},
-        component: () => import('../components/DefaultLayout.vue'),
-        children:[
-            {path:'/dashboard', name:'dashboard', component: () =>  import('../views/Dashboard.vue')},
-            {path:'/surveys', name:'surveys', component: () =>  import('../views/Surveys.vue')},
-        ]
-    },
-    {
-        path: '/auth',
-        redirect: '/login',
-        name: 'Auth',
-        meta: {authRoute: true},
-        component: () => import('../components/AuthLayout.vue'),
+import dashboardRoutes from "./dashboardRoutes";
+import authRoutes from "./authRoutes";
 
-        children: [
-            {
-                path: '/login',
-                name: 'Login',
-                component: () => import('../views/Login.vue')
-        
-            },
-            {
-                path: '/register',
-                name: 'Register',
-                component: () => import('../views/Register.vue')
-        
-            },
-        ]
-        
-    },
-    
+const routes = [
+    dashboardRoutes,
+    authRoutes,
     { path: '/:pathMatch(.*)*',  component: () =>  import('../views/NotFound.vue')},
     
 ];
