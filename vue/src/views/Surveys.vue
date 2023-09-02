@@ -1,9 +1,9 @@
 <template>
-    <header-dashboard title="Surveys" />
+    <header-dashboard title="Опросы" />
     
     <main>
       <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-        <h1>Surveys</h1>    
+        <h1>Опросы</h1>    
       </div>
     </main>
     
